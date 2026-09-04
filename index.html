@@ -14,16 +14,34 @@
         console.log(result1)
 
         let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
-        let result = height.reduce((sum, acc) => sum + acc, 5)
-        console.log(result)
+
+        let max = 0;
+
+        for (let i = 0; i < height.length; i++) {
+
+            for (let j = i + 1; j < height.length; j++) {
+
+                let width = j - i;
+
+                let h = Math.min(height[i], height[j]);
+
+                let area = width * h;
+
+                if (area > max) {
+                    max = area;
+                }
+            }
+        }
+
+        console.log(max);
 
         let n = 2736;
-        let rev = 0;
-        for (i = n; i > 0; i = parseInt(n / 10)) {
-            let digit = n % 10;
-            let rev = rev * 10 + digit
-            console.log(rev)
-        }
+
+        let str = n.toString();
+
+        let result2 = str[1] + str[0] + str[2] + str[3];
+
+        console.log(result2);
 
 
 
