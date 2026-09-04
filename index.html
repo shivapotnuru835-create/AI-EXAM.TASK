@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nums = [2, 2, 1, 1, 1, 2, 2]
+        let result1 = nums.find(x => x > 1)
+        console.log(result1)
+
+        let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+        let result = height.reduce((sum, acc) => sum + acc, 5)
+        console.log(result)
+
+        let n = 2736;
+        let rev = 0;
+        for (i = n; i > 0; i = parseInt(n / 10)) {
+            let digit = n % 10;
+            let rev = rev * 10 + digit
+            console.log(rev)
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
